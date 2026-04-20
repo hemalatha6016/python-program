@@ -1,0 +1,4 @@
+#Goal: Print a triangle of height where each row contains the digit repeated times, using only math and one line of code.
+
+for i in range(1,int(input())): #More than 2 lines will result in 0 score. Do not leave a blank line also
+    print(i * ((10**i - 1) // 9))
