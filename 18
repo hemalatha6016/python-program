@@ -1,0 +1,14 @@
+import re
+def replace_symbols(match):
+    symbol =match.group(0)
+    if symbol=="&&":
+        return "and"
+    elif symbol=="||":
+        return "or"
+n =int(input())
+
+for _ in range(n):
+    line=input()
+    pattern =r'(?<= )(&&|\|\|)(?= )'
+    new_line =re.sub(pattern,replace_symbols,line)
+    print(re.sub(pattern, replace_symbols, new_line))
