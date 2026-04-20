@@ -1,0 +1,8 @@
+#Goal: Print all possible combinations of a string of length, allowing the same character to be used multiple times. The output must be sorted alphabetically.
+
+from itertools import combinations_with_replacement
+s,k=input().split()
+s =sorted(s)
+k =int(k)
+for combo in combinations_with_replacement(s,k):
+    print("".join(combo))
