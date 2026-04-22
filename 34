@@ -1,0 +1,14 @@
+Python Program to Find the Number Occurring Odd Number of Times in a List
+
+
+def find_odd_occurring(alist):
+    ans = 0
+ 
+    for element in alist:
+        ans ^= element
+ 
+    return ans
+alist = input('Enter the list: ').split()
+alist = [int(i) for i in alist]
+ans = find_odd_occurring(alist)
+print('The element that occurs odd number of times:', ans)
