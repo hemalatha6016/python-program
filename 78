@@ -1,10 +1,16 @@
 Python Program to Implement Selection Sort
 
-def selection_sort(arr):
-    n = len(arr)
-    for i in range(n-1):
-        min_index = i
-        for j in range(i+1, n):
-            if arr[j] < arr[min_index]:
-                min_index = j
-        arr[i], arr[min_index] = arr[min_index], arr[i]
+
+def selection_sort(alist):
+    for i in range(0, len(alist) - 1):
+        smallest = i
+        for j in range(i + 1, len(alist)):
+            if alist[j] < alist[smallest]:
+                smallest = j
+        alist[i], alist[smallest] = alist[smallest], alist[i]
+ 
+ 
+alist = input('Enter the list of numbers: ').split()
+alist = [int(x) for x in alist]
+selection_sort(alist)
+print('Sorted l
