@@ -1,3 +1,5 @@
+#You have a set S and one other set T. You need to update S by removing all elements that are also in T, and then print the sum of the remaining elements in S.
+
 _ = int(input())
 A =set(map(int, input().split()))
 n_ops =int(input())
