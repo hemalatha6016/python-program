@@ -1,0 +1,9 @@
+_ = int(input())
+A =set(map(int, input().split()))
+n_ops =int(input())
+for _ in range(n_ops):
+    operation=input().split()[0]
+    other_set=set(map(int, input().split()))
+    getattr(A,operation)(other_set)
+
+print(sum(A))
