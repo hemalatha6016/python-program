@@ -1,0 +1,16 @@
+#You have a non-empty set s, and you have to execute N commands given in N lines.The commands will be pop, remove and discard. 
+
+n=int(input())
+s =set(map(int, input().split()))
+n_commands=int(input())
+
+for _ in range(n_commands):
+    command=input().split()
+    method_name=command[0]
+    
+    if method_name== "pop":
+        s.pop()
+    else:
+        getattr(s,method_name)(int(command[1]))
+
+print(sum(s))
